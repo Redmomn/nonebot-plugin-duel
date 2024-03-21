@@ -37,7 +37,6 @@ async def is_duel_event(event: GroupMessageEvent, state: T_State) -> bool:
     """
     duel_user_1 = event.user_id
     duel_user_2 = await get_at(event)
-    logger.info(duel_user_2)
     if duel_user_2 == 0 or duel_user_1 == duel_user_2:
         return False
     state['duel_user_1'] = duel_user_1

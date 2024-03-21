@@ -189,5 +189,4 @@ async def get_session_users() -> dict[int, list[int]]:
         users: dict[int, list[int]] = {}
         for session in sessions:
             users[session.group_id] = [session.duel_user_1, session.duel_user_2]
-        logger.info(users)
         return users
