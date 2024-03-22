@@ -4,7 +4,7 @@
 
 <div align="center">
 
-# nonebot-plugin-vits-tts
+# nonebot-plugin-duel
 
 ✨ 来一场西部牛仔决斗吧 ✨
 
