@@ -45,8 +45,7 @@ async def is_duel_event(event: GroupMessageEvent, state: T_State) -> bool:
 
 
 async def get_at(event: GroupMessageEvent) -> int:
-    pattern = r'\[CQ:at,qq=(\d+)]'
-    matches = re.findall(pattern, event.raw_message)
-    if len(matches) == 1:
-        return int(matches[0])
+    at_segments = [seg for seg in event.get_message() if seg.type == "at"]
+    if len(at_segments) == 1:
+        return int(at_segments[0].data["qq"])
     return 0
